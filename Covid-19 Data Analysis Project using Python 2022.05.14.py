@@ -10,7 +10,12 @@ data.columns
 data.tail()
 data.describe()
 data.columns
+
+# relating the variables with scatterplots
+
 sns.relplot(x = "total_cases", y = "recovered", data = data)
+#As the total cases increase, the recover number becomes more. People are recovering.
+
 sns.relplot(x = "total_cases", y = "deaths", data = data)
 sns.relplot(x = "total_cases", y = "total_confirmed_cases", data = data)
 sns.relplot(x = "total_cases", y = "hospitalized_with_symptoms", data = data)
@@ -19,6 +24,8 @@ sns.pairplot(data)
 data.columns
 sns.relplot(x = "total_cases", y = "home_quarantine", kind = "line", data = data)
 sns.relplot(x = "recovered", y = "home_quarantine", kind = "line", data = data)
+#If more people are under quarantined, the total cases will increase slower.
+
 data.columns
 sns.catplot(x = "total_cases", y = "recovered", data = data)
 
